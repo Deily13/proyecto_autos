@@ -1,0 +1,89 @@
+* {
+  margin: 5px;
+  padding: 0px;
+}
+
+html, body {
+  background-image: url(../templates/img/font-acero3.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Cuadro{
+  background-color:#02022e9c; 
+  margin: 3% 200px 0px;
+  border: 2px solid white;
+  justify-content: center;
+}
+
+.Titulo{
+  color: #fff;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 50px;
+  text-align: right;
+  text-shadow: 0 0 15px #272323d5;
+  margin: 0px ;
+}
+  
+  .Datos{
+    background-color: #02022ebe;
+    text-align:right;
+    margin:2% 10% 30px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 3px;
+  }
+
+  .text {
+
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Stardos Stencil', sans-serif;
+  }
+  .espacio{
+    width: 200px;
+    height: 28px;
+    color:#080c1b;
+    font-size: 20px;
+    border:1px solid darkblue;
+    border-radius: 2px
+  }
+
+.Contenedor_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Botones {
+    font-family:'Black Ops One', sans-serif; 
+    background-color: #030355c2;
+    font-size: 40px;
+    color: #fff;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 9px;
+    margin: 10px;
+  }
+  
+  @keyframes saltar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+  
+  .Botones {
+    transition: transform 1s ease-in-out;
+  }
+  
+  .Botones:hover {
+    animation: saltar 1s;
+  }

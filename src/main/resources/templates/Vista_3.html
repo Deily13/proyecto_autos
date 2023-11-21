@@ -1,0 +1,153 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="Vista_3.css">
+</head>
+
+<body>
+    <form th:action="@{/save}" th:object="${vehiculo}" action="Vista_4.html" method="post" onsubmit="return validarFormulario()">
+
+        <div Class="Cuadro">
+            <div class="Titulo">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+                INFORMACIÓN DE SU AUTO
+            </div>
+            <div class="Datos">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap" rel="stylesheet">
+                <label th:field="*{placa}" id="placa_auto" class="text">Placa De Su Auto</label>
+                <input type="text" pattern="[0-9]{3}" pattern="[A-Z]{3}" class="espacio" required /><br><br>
+                <label th:field="*{color}" id="color_auto" class="text"> Selccionar El Color De Su Auto</label>
+                <input type="color" class="espacio" /><br><br>
+                <div id="hex"></div>
+                <label th:field="*{años_auto}" id="años_auto" class="text">Años De Funcionamiento Tiene Su Auto</label>
+                <input type="text" inputmode="numeric" pattern="\d" class="espacio" /><br><br>
+            </div>
+
+
+            <div class="Titulo_2">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap" rel="stylesheet">
+                Seleccione La Marca De Su Auto:
+            </div>
+
+            <div class="Conten_Marcas">
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/BMW.jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="BMW" type="radio" id="radio_1" required>
+                            <label for="radio_1">BMW</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/Bugati.jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}"  name="auto" value="Bugatti" type="radio" id="radio_2" required>
+                            <label for="radio_2">Bugatti</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/Ferrari.jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Ferrari" type="radio" id="radio_3" required>
+                            <label for="radio_3">Ferrari</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/Ford.jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Ford" type="radio" id="radio_4" required>
+                            <label for="radio_4">Ford</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/Lamborgini.jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Lamborghini" type="radio" id="radio_5" required>
+                            <label for="radio_5"> Lamborghini</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/land-rover.jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Land_Rover" type="radio" id="radio_6" required>
+                            <label for="radio_6">Land Rover</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/maserati .jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Masserati" type="radio" id="radio_7" required>
+                            <label for="radio_7">Masserati</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/Mercedes.jpg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Mercedes" type="radio" id="radio_8" required>
+                            <label for="radio_8">Mercedes</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/Porshe.jpeg" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Porsche" type="radio" id="radio_9" required>
+                            <label for="radio_9">Porsche</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Marcas">
+                    <div class="Marca">
+                        <img src="img/Marcas/Toyota.png" class="imagen">
+                        <div class="radio-container">
+                            <input th:field="*{auto}" name="auto" value="Toyota" type="radio" id="radio_10" required>
+                            <label for="radio_10">Toyota</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="Contenedor_btn">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+            <input name="rest" type="reset" value="Resetear" class="Botones" />
+            <input name="submit" type="submit" value="Siguiente" class="Botones" />
+        </section>
+
+    </form>
+
+    <script>
+        const colorInput = document.getElementById("color");
+        const hexDiv = document.getElementById("hex");
+        hexDiv.innerHTML = colorInput.value.substring(1);
+    </script>
+</body>
+</html>

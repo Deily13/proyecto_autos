@@ -1,0 +1,32 @@
+* {
+  margin: 5px;
+  padding: 0px;
+}
+
+html,
+body {
+  background-image: url(../templates/img/font-acero3.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.Cuadro {
+  background-image: url(../templates/img/Texture.jpeg);
+  margin: 15% 20% 0px;
+  display: flex;
+  border: 3px solid black;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 50px #fff;
+}
+
+label {
+  color: #fff;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 400%;
+  text-shadow: 0 0 15px #272323d5;
+  background-color: #0909837e;
+  text-align: center;
+}

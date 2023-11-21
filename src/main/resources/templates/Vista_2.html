@@ -1,0 +1,50 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="Vista_2.css">
+</head>
+
+<body>
+
+    <form th:action="@{/save}" th:object="${reserva}" action="Vista_3.html" method="post"
+        onsubmit="return validarFormulario()">
+        <div Class="Cuadro">
+            <div class="Titulo">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+                Información De Usuario
+            </div>
+            <div class="Datos">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap" rel="stylesheet">
+                <label th:field="*{id}" id="id" class="text">Identidad</label>
+                <input type="text" class="espacio" required /><br><br>
+                <label th:field="*{nombre}" id="nombre" class="text">Nombre</label>
+                <input type="text" class="espacio" required /><br><br>
+                <label th:field="*{apellidos}" id="apellidos" class="text">Apellidos</label>
+                <input type="text" class="espacio" required /><br><br>
+                <label th:field="*{e_mail}" id="e_mail" class="text">Correo Electronico</label>
+                <input type="text" class="espacio" required /><br><br>
+                <label th:field="*{tell}" id="tell" class="text">Numero De telefono</label>
+                <input type="tel" class="espacio" required><br><br>
+                <label th:field="*{direccion}" id="direccion" class="text">Dirección</label>
+                <input type="text" class="espacio" required /><br><br>
+            </div>
+        </div>
+        <section class="Contenedor_btn">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+            <input name="rest" type="reset" value="Resetear" class="Botones" />
+            <input name="submit" type="submit" value="Siguiente" class="Botones" />
+        </section>
+    </form>
+</body>
+
+</html>

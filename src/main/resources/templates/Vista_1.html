@@ -1,0 +1,179 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tabla De servicios</title>
+    <link rel="stylesheet" href="Vista_1.css">
+</head>
+
+<body>
+    <div class="Encabezado">
+        <img src="img/Deutschland.png" class="logo">
+    </div>
+
+    <div class="Titulo">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        SERVICIOS
+    </div>
+
+    <form th:action="@{/save}" th:object="${servicio}" method="POST" action="Vista_2.html" id="form_servicio">
+        <div class="Container_Servicio">
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap" rel="stylesheet">
+
+            <a class="Cuadro">
+                <h4>Revición <br> Tecnica</h4>
+                <label for="Checkbox_1" class="Seccion">
+                    <input th:multiple="true" th:field="*{Revision Tecnica}" name="Revision Tecnica" type="checkbox" id="Checkbox_1">
+                    <div class="Servicio">
+                        <img alt="Revision_Tecnica" src="img/Servicios_de_taller/Motor-de-auto-sacando-humo.webp"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Mantenimineto<br> Preventivo</h4>
+                <label for="Checkbox_2" class="Seccion">
+                    <input th:multiple="true" th:field="*{Mantenimiento-1}" name="Mantenimiento-1" type="checkbox" id="Checkbox_2">
+                    <div class="Servicio">
+                        <img alt="Mantenimiento-1" src="img/Servicios_de_taller/istockphoto-1364951753-612x612.jpg"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Mantenimiento<br> Correctivo</h4>
+                <label for="Checkbox_3" class="Seccion">
+                    <input th:multiple="true" th:field="*{Mantenimiento-2}" name="Mantenimiento-2" type="checkbox" id="Checkbox_3">
+                    <div class="Servicio">
+                        <img alt="Mantenimiento-2" src="img/Servicios_de_taller/bugatti-centodieci-9-1613034287.jpg"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Reparación<br> De Partes</h4>
+                <label for="Checkbox_4" class="Seccion">
+                    <input th:multiple="true" th:feild="*{Reparación}" name="Reparación" type="checkbox" id="Checkbox_4">
+                    <div class="Servicio">
+                        <img alt="Reparación Partes" src="img/Servicios_de_taller/istockphoto-1212230930-612x612.jpg"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Cambio<br> De partes</h4>
+                <label for="Checkbox_5" class="Seccion">
+                    <input th:multiple="true" th:field="*{Cambio-partes}" name="Cambio-partes" type="checkbox" id="Checkbox_5">
+                    <div class="Servicio">
+                        <img alt="Cambio-partes" src="img/Servicios_de_taller/istockphoto-1139697726-170667a.jpg"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Cambio<br> De Aceite</h4>
+                <label for="Checkbox_6" class="Seccion">
+                    <input th:multiple="true" th:field="*{Cambio-aceite}" name="Cambio-aceite" type="checkbox" id="Checkbox_6">
+                    <div class="Servicio">
+                        <img alt="Cambio-aceite" src="img/Servicios_de_taller/istockphoto-1332818521-170667a.jpg"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Cambio<br> De Ruedas</h4>
+                <label for="Checkbox_7" class="Seccion">
+                    <input th:multiple="true" th:field="*{Cambio-Ruedas}" name="Cambio-Ruedas" type="checkbox" id="Checkbox_7">
+                    <div class="Servicio">
+                        <img alt="Cambio-Ruedas" src="img/Servicios_de_taller/450_1000.jpg" class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Revision Del Sistema De<br> Suspención</h4>
+                <label for="Checkbox_8" class="Seccion">
+                    <input th:multiple="true" th:field="*{Revision-Suspencion}" name="Revision-Suspencion" type="checkbox" id="Checkbox_8">
+                    <div class="Servicio">
+                        <img alt="Revision-Suspencion"
+                             src="img/Servicios_de_taller/sistemas-de-suspension-automoviles.jpg" class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Alineación<br> Y Rotación De Ruedas</h4>
+                <label for="Checkbox_9" class="Seccion">
+                    <input th:multiple="true" th:field="*{Alineación-Rotación}" name="Alineación-Rotación" type="checkbox" id="Checkbox_9">
+                    <div class="Servicio">
+                        <img alt="Alineación-Rotación" src="img/Servicios_de_taller/EQ-2910356.jpg" class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Revición De Frenos</h4>
+                <label for="Checkbox_10" class="Seccion">
+                    <input th:multiple="true" th:field="*{Revision-Frenos}" name="Revision-Frenos" type="checkbox" id="Checkbox_10">
+                    <div class="Servicio">
+                        <img alt="Revision-Frenos" src="img/Servicios_de_taller/Sistema-de-frenos.webp" class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Lavado</h4>
+                <label for="Checkbox_11" class="Seccion">
+                    <input th:multiple="true" th:field="*{Lavado}" name="Lavado" type="checkbox" id="Checkbox_11">
+                    <div class="Servicio">
+                        <img alt="Lavado"
+                            src="img/Servicios_de_taller/desktop-wallpaper-self-service-car-wash-fleet-services-car-wash.jpg"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+            <a class="Cuadro">
+                <h4>Pulido Y Encerado</h4>
+                <label for="Checkbox_12" class="Seccion">
+                    <input th:multiple="true" th:field="*{Pulido}" name="Pulido" type="checkbox" id="Checkbox_12">
+                    <div class="Servicio">
+                        <img alt="Pulido"
+                            src="img/Servicios_de_taller/2018-02-14-teroson-mejora-su-gama-de-masillas-para-la-reparación-jpg-1-.jpg"
+                            class="imagen">
+                    </div>
+                </label>
+            </a>
+        </div>
+
+        <section class="Contenedor_btn">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+            <input name="rest" type="reset" value="Resetear" class="Botones" />
+            <input name="submit" type="submit" value="Registrar" class="Botones" />
+        </section>
+    </form>
+</body>
+    <script>
+        document.getElementById('form_servicio').addEventListener('submit', function(event) {
+          var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+          var seleccionado = false;
+        
+          for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+              seleccionado = true;
+              break;
+            }
+          }
+        
+          if (!seleccionado) {
+            alert('Debes seleccionar al menos una opción.');
+            event.preventDefault();
+          }
+        });
+        </script>
+
+</html>

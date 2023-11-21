@@ -1,0 +1,157 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+html, body{
+background-image: url(../templates/img/font-acero3.jpeg);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.Encabezado{
+    margin-bottom: 100px;
+    background: linear-gradient( to right, #000000, #04040c, #010a3aa6, #020255b9, #010729c0  );
+    border-radius: 5px;
+    box-shadow: #f4f4f5;
+    padding: 5px;
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+  width: 120px;
+  height: 120px;
+}
+
+.Titulo{ 
+color: white;
+font-size: 80px;
+font-weight: 200;
+font-family:'Black Ops One', sans-serif;
+text-align: center;
+text-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.Container_Servicio{
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #02022e60;
+}
+
+.Cuadro{
+  flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 8px 8px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+}
+
+.Cuadro:hover{
+  box-shadow: 0px 0px 20px #ffffff;;
+}
+
+.Seccion {
+  position: relative;
+  display: inline-block;
+}
+
+.Seccion input {
+  position: absolute;
+  opacity: 0;
+}
+
+.Seccion .Servicio {
+  width: 340px;
+  height: 290px;
+  margin-bottom: 10px;
+}
+
+.Seccion .Servicio:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.Seccion input:checked + .Servicio:before {
+  background-color: #02033ba2;
+}
+
+.Servicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h4{
+    margin: 12px 8px;
+    color: #fff;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Stardos Stencil', sans-serif;
+}
+
+
+.imagen{
+    border-radius: 6px;
+    width: 340px;
+    height: 290px;
+   
+}
+
+.Contenedor_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Botones{
+  font-family:'Black Ops One', sans-serif; 
+    background-color: #030355c2;
+    font-size: 40px;
+    color: #fff;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 9px;
+    margin: 10px;
+}
+
+
+
+@keyframes saltar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .Botones {
+    transition: transform 1s ease-in-out;
+  }
+  
+  .Botones:hover {
+    animation: saltar 1s;
+  }

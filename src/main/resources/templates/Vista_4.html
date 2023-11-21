@@ -1,0 +1,75 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="Vista_4.css">
+</head>
+
+<body>
+
+    <form th:action="@{/save}" th:object="${reserva}" action="Vista_5.html" method="post"
+        onsubmit="return validarFormulario()">
+        <div Class="Cuadro">
+            <div class="Titulo">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+                Reservación Para Su Vehiculo
+            </div>
+            <div class="Datos">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap" rel="stylesheet">
+                <label th:field="*{llevar_auto}" id="llevar_auto" class="text"> Cuando Desea Llevar Su Auto Al
+                    Taller</label>
+                <input type="date" id="fecha1" name="fecha1" class="espacio" required><br><br>
+                <label th:filed="*{hora_auto}" id="hora_auto" class="text">Hora A La Que Desea Llevar Su Auto Al
+                    Taller</label>
+                <input type="time" class="espacio"><br><br>
+                <label th:field="*{recojer_auto}" id="recojer_auto" class="text"> Cuando Desea Recojer Su Auto</label>
+                <input type="date" id="fecha2" name="fecha2" class="espacio"><br><br>
+                <label th:field="*{tipo-p}" id="tipo-p" class="text">Tipo De Pago</label>
+                <select name="tipos de pago" class="espacio" required>
+                    <option><aria-placeholder>--Seleccione su tipo de pago--</aria-placeholder></option>
+                    <option value="dinero en efectivo">Dinero en efectivo</option>
+                    <option value="targeta de credito">Targeta de credito</option>
+                    <option value="targeta debito">Targeta debito</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="cheque">Cheque</option>
+                </select><br><br>
+            </div>
+        </div>
+            <section class="Contenedor_btn">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+                <input name="rest" type="reset" value="Resetear" class="Botones" />
+                <input name="submit" type="submit" value="Finalizar" class="Botones" />
+            </section>
+    </form>
+</body>
+<script>
+    document.querySelector('form').addEventListener('submit', function (event) {
+        var fechaInput1 = document.getElementById('fecha1');
+        var fechaInput2 = document.getElementById('fecha2');
+
+        var fechaSeleccionada1 = new Date(fechaInput1.value);
+        var fechaSeleccionada2 = new Date(fechaInput2.value);
+        var fechaHoy = new Date();
+
+        if (fechaSeleccionada1 < fechaHoy) {
+            alert('La fecha para llevar su auto debe ser igual o posterior a hoy.');
+            event.preventDefault();
+        } else if (fechaSeleccionada2 < fechaSeleccionada1) {
+            alert('La fecha de recojer su auto debe ser igual o superior a la fecha de llevarlo al taller.');
+            event.preventDefault();
+        }
+    })
+</script>
+
+
+
+</html>

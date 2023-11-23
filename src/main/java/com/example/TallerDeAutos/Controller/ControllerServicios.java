@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -26,14 +27,10 @@ public class ControllerServicios {
     }
 
     @PostMapping("/save")
-    public String save(@Validated Servicios s){
+    public String save(@ModelAttribute("servicios") @Validated Servicios s){
         servicioService.save(s);
-        return "redirect:/listar";
+        return "redirect:/api/servcio/listar";
     }
 
-    @GetMapping("/nuevo")
-    public String agregar(Model model){
-        model.addAttribute("servicios", new Servicios());
-        return "vista_1";
-    }
+
 }

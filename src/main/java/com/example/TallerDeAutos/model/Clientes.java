@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -35,6 +36,20 @@ public class Clientes {
     private  int idReserva;
     @Column
     private int idServicio;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Vehiculos> vehiculos;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Reservas> reservas;
+
+    @ManyToMany
+    @JoinTable(
+            name = "cliente_servicio",
+            joinColumns = @JoinColumn(name = "cliente_id"),
+            inverseJoinColumns = @JoinColumn(name = "servicio_id")
+    )
+    private List<Servicios> servicios;
 
 
 }

@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,5 +21,8 @@ public class Marcas {
     private int IdMarca;
     @Column
     private String nombreMarca;
+
+    @OneToMany(mappedBy = "marca")
+    private List<Vehiculos> vehiculos;
 
 }

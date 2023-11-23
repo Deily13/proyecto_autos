@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.JoinColumnOrFormula;
 
 @Entity
 @AllArgsConstructor
@@ -25,4 +26,8 @@ public class Reservas {
     private String recojer_auto;
     @Column
     private String tipo_p;
+
+    @OneToOne
+    @JoinColumn(name = "idReserva")
+    private Clientes cliente;
 }

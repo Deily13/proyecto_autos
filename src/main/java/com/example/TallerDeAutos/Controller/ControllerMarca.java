@@ -30,9 +30,4 @@ public class ControllerMarca {
         return "redirect:/listar";
     }
 
-    @GetMapping("/nuevo")
-    public String agregar(Model model){
-        model.addAttribute("marcas", new Marcas());
-        return "vista_1";
-    }
 }

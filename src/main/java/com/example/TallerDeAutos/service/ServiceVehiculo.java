@@ -24,7 +24,7 @@ public class ServiceVehiculo implements IVehiculoService {
     }
 
     @Override
-    public int save(Vehiculos v) {
+    public int guardarVehiculo(Vehiculos v) {
         int res=0;
         Clientes clientes = new Clientes();
         Vehiculos vehiculos =repositoryVehiculos.save(v);

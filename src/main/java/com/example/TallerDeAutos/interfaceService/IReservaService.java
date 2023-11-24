@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface IReservaService {
     public List<Reservas> listar();
     public Optional<Reservas> listidRes(int idRes);
-    public int save (Reservas r);
+    public int guardarReserva (Reservas r);
 
 }

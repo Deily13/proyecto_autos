@@ -29,7 +29,7 @@ html, body {
   
   .Datos{
     background-color: #02022ebe;
-    text-align:right;
+    text-align:left;
     margin:2% 10% 30px;
     padding: 20px;
     border: 2px solid white;
@@ -41,6 +41,7 @@ html, body {
     color: #fff;
     font-size: 28px;
     font-family: 'Stardos Stencil', sans-serif;
+    text-align:left;
   }
   .espacio{
     width: 200px;

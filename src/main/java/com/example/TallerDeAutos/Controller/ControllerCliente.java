@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
     @Controller
-    @RequestMapping("/api/cliente")
     public class ControllerCliente{
 
         @Autowired
@@ -38,10 +37,17 @@ import java.util.List;
             return "redirect:/listar";
         }
 
+        @GetMapping("/mostrarVista2")
+        public String mostrarVista2(Model model){
+            // Aquí podrías obtener el objeto cliente pasado desde la acción save y agregarlo al modelo
+            // Luego, cargar Vista_2.html con los datos necesarios
+            return "Vista_2";
+        }
+
         @GetMapping("/nuevo")
         public String agregar(Model model){
-            model.addAttribute("cliente", new Clientes());
-            return "vista_1";
+            model.addAttribute("clientes", new Clientes());
+            return "Vista_2";
         }
     }
 

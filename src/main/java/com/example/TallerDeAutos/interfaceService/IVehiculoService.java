@@ -8,5 +8,5 @@ import java.util.Optional;
 public interface IVehiculoService {
     public List<Vehiculos> listar();
     public Optional<Vehiculos> listplaca(String placa);
-    public int save (Vehiculos v);
+    public int guardarVehiculo (Vehiculos v);
 }

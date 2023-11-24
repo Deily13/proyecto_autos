@@ -22,12 +22,12 @@ public class ServiceServicio implements IServicioService {
     }
 
     @Override
-    public Optional<Servicios> listservcios(int id_servic_cliente) {
+    public Optional<Servicios> listservicios(int id_servic_cliente) {
         return repositoryServicios.findById(id_servic_cliente);
     }
 
     @Override
-    public int save(Servicios s) {
+    public int guardarServicio(Servicios s) {
         int res = 0;
         Clientes clientes = new Clientes();
         Servicios servicios = repositoryServicios.save(s);
@@ -37,6 +37,7 @@ public class ServiceServicio implements IServicioService {
         }
         return res;
     }
+
 
 
 }

@@ -24,6 +24,7 @@
       <th>AÑOS</th>
       <th>MARCA</th>
       <th>SERVICIOS</th>
+      <th>ACCIONES</th>
 
     </tr>
     </thead>
@@ -35,25 +36,18 @@
       <td th:text="${cliente.e-mail}"></td>
       <td th:text="${cliente.tell}"></td>
       <td th:text="${cliente.direccion"></td>
-      <td th:each="vehiculo:${vehiculos}"></td>
-      <td th:text="${vehiculo.placa}"></td>
-      <td th:text="${vehiculo.color}"></td>
-      <td th:text="${vehiculo.años_auto}"></td>
-      <td th:text="${vehiculo.placa}"></td>
-      <td th:text="${vehiculo.auto}"></td>
+      <td th:each="vehiculo:${vehiculos}">
+      <td th:text="${vehiculoAux.placa}"></td>
+      <td th:text="${vehiculoAux.color}"></td>
+      <td th:text="${vehiculoAux.años_auto}"></td>
+      <td th:text="${vehiculoAux.placa}"></td>
+      <td th:text="${vehiculoAux.auto}"></td>
+      <a th:href="@{/eliminar/}+${cliente.id}" class="btn btn-danger">Eliminar</a>
 
-
-
-        <a th:href="@{/eliminar/}+${cliente.id}"  class="btn btn-danger">Eliminar</a>
-      </td>
 
     </tr>
     </tbody>
   </table>
-
-
-
-
 </div>
 
 </body>

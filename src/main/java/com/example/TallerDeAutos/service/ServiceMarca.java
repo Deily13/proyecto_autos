@@ -26,7 +26,7 @@ public class ServiceMarca implements IMarcaService {
     }
 
     @Override
-    public int save(Marcas m) {
+    public int guardarMarca(Marcas m) {
         int res = 0;
         Vehiculos vehiculos = new Vehiculos();
         Marcas marcas = repositoryMarcas.save(m);
@@ -35,4 +35,6 @@ public class ServiceMarca implements IMarcaService {
         }
         return res;
     }
+
+
 }

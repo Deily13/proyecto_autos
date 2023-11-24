@@ -25,7 +25,7 @@ public class ServiceRerserva implements IReservaService {
     }
 
     @Override
-    public int save(Reservas r) {
+    public int guardarReserva(Reservas r) {
         int res = 0;
         Clientes clientes = new Clientes();
         Reservas reservas = repositoryReservas.save(r);
